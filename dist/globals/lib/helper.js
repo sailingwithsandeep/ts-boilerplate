@@ -352,9 +352,10 @@ const helper = {
                     obj['dCreatedDate'] = new Date();
                     obj['dUpdatedDate'] = new Date();
                 }
-                else if (Array.isArray(obj[key]) && key == 'aOptions')
+                else if (Array.isArray(obj[key]) && key == 'arrayObjectField')
                     for (const iterator of obj[key])
-                        iterator.iOptionId = _.ObjectId();
+                        iterator.id = _.ObjectId();
+                // * For adding objectId in nested docs
             });
             return obj;
         }

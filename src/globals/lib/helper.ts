@@ -388,7 +388,8 @@ const helper = {
                     obj[key] = value.default;
                     obj['dCreatedDate'] = new Date();
                     obj['dUpdatedDate'] = new Date();
-                } else if (Array.isArray(obj[key]) && key == 'aOptions') for (const iterator of obj[key]) iterator.iOptionId = _.ObjectId();
+                } else if (Array.isArray(obj[key]) && key == 'arrayObjectField') for (const iterator of obj[key]) iterator.id = _.ObjectId();
+                // * For adding objectId in nested docs
             });
 
             return obj;
