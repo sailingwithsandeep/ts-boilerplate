@@ -1,0 +1,6 @@
+.history
+dist
+node_modules
+.env
+tsconfig.json
+.eslintrc.js
