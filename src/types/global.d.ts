@@ -1,6 +1,4 @@
 import { NextFunction, Request, Response } from 'express';
-import { ObjectId } from 'mongodb';
-import { eStatus } from './enum';
 import { UserWithId } from '../app/models/lib/schema/User.ts';
 import { AdminWithId } from '../app/models/lib/schema/Admin.ts';
 
@@ -43,9 +41,6 @@ declare module 'express-serve-static-core' {
     interface Request {
         user: UserWithId;
         admin: AdminWithId;
-        settings: ISetting;
-        protoData: ITablePrototypeType;
-        table: ITableType;
         sRemoteAddress: string;
         token: string;
     }
