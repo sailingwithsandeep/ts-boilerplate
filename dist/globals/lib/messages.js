@@ -11,7 +11,6 @@ class Messages {
             user_create_success: { code: 200, message: 'Congratulations!! You have been registered successfully.' },
             login_otp_success: { code: 201, message: 'Verification OTP sent to your registered mobile number.' },
             user_not_found: { code: 404, message: "Sorry, we didn't find any account with that Email id" },
-            insufficient_chips: { code: 419, message: 'You have insufficient balance' },
             invalid_password: { code: 419, message: 'Please enter valid password with length 8 to 15.' },
             duplicate_password: { code: 419, message: 'You can not use old password as your new password' },
             username_update_err: { code: 419, message: 'You can not update your user name more than one time.' },
@@ -98,9 +97,6 @@ class Messages {
     }
     success(prefix = '') {
         return this.prepare(200, prefix, 'Success');
-    }
-    participant_not_added(prefix = '') {
-        return this.prepare(419, prefix, 'Participant not added!');
     }
     successfully(prefix = '') {
         return this.prepare(200, prefix, 'Successfully');

@@ -4,8 +4,6 @@ import { eStatus } from './enum';
 import { UserWithId } from '../app/models/lib/schema/User.ts';
 import { AdminWithId } from '../app/models/lib/schema/Admin.ts';
 
-
-
 declare interface IMetaData {
     code: number;
     message: string;
@@ -22,7 +20,6 @@ declare interface ICustomMessages {
     user_create_success: IMetaData;
     login_otp_success: IMetaData;
     user_not_found: IMetaData;
-    insufficient_chips: IMetaData;
     invalid_password: IMetaData;
     duplicate_password: IMetaData;
     username_update_err: IMetaData;
